@@ -19,6 +19,12 @@ const routes: Routes = [
     loadChildren: () =>
       import('./layout/customer/customer.module').then((m) => m.CustomerModule),
   },
+  { path: '', pathMatch: 'full', redirectTo: '/admin' },
+  // {
+  //   path: 'welcome',
+  //   loadChildren: () =>
+  //     import('./pages/welcome/welcome.module').then((m) => m.WelcomeModule),
+  // },
 ];
 
 @NgModule({

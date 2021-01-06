@@ -1,0 +1,19 @@
+<h3>Chào Mừng Đến Với Trang Đăng Nhập Người Bán</h3>
+<p>Test pipe: lowercase: {{ adminLogin.userName |lowercase }}</p>
+<p>Test pipe: uppercase: {{ adminLogin.userName |uppercase }}</p>
+<p>Test age pipe: uppercase: {{ age | number:'0.0-2' | currency }}</p>
+<p>age {{age}}</p>
+<button class="btn btn--primary" (click)="AddAge()">phải có ng-template</button>
+<span *ngIf="age>18; else under18" MyColor>bạn trên 18</span>
+<ng-template #under18> <span appBold > bạn dưới 18</span></ng-template> 
+<h3 appBold >nên dùng if-else hoặc if-then hoặc switch case </h3>
+<td [ngSwitch]="age">
+<span *ngSwitchCase="18">
+          Yes: lớn hơn 18
+</span>
+<span *ngSwitchCase="0">
+        No: nhỏ hơn 18
+</span>
+</td>
+<a [routerLink]="['home']" routerLinkActive="router-link-active">đến home</a>
+<router-outlet name='test-angular-all'></router-outlet>
